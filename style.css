@@ -1,0 +1,222 @@
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	padding: 0 25px;
+	min-height: 100vh;
+	background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+}
+
+main {
+	display: flex;
+	max-width: 920px;
+	width: 100%;
+	min-height: 510px;
+	border-radius: 20px;
+	background-color: white;
+	box-sizing: border-box;
+}
+
+/* ILUSTRATION SECTION */
+
+.ilustration_Desktop {
+	max-width: 460px;
+	width: 100%;
+	height: 510px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+
+.figDesktop {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+}
+
+.ilustration_Mobile {
+	width: 100%;
+	height: 135px;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	display: none;
+	box-sizing: border-box;
+}
+
+.figMobile {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	position: absolute;
+}
+
+/* OVERFLOW CLASS */
+
+.figureOverflow {
+	overflow: hidden;
+}
+
+/* ILUSTRATIONS */
+
+.boxIllDesktop {
+	position: absolute;
+	z-index: 2;
+	top: 205px;
+	left: -90px;
+}
+
+.womanIllDesktop {
+	position: absolute;
+	z-index: 1;
+	top: 70px;
+	left: -84px;
+}
+
+.bgIllDesktop {
+	position: absolute;
+	top: -295px;
+	left: -600px;
+}
+
+.womanIllMobile {
+	position: absolute;
+	z-index: 2;
+	max-width: 240px;
+	width: 100%;
+	top: -110px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.bgIllMobile {
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/* END ILUSTRATIONS */
+
+/* END ILUSTRATION SECTION */
+
+/* END FAQ SECTION */
+
+.faqSec {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-sizing: border-box;
+	padding: 0 95px 0 15px;
+	max-width: 460px;
+	width: 100%;
+}
+
+/* ACCORDION SEC */
+
+.secAcc {
+	border: solid hsl(240, 5%, 91%);
+    border-width: 0 0 1px 0;
+}
+
+h1 {
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 32px;
+	margin-top: 0;
+	color: hsl(238, 29%, 16%);
+}
+
+button {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 50px;
+	border: none;
+	font-size: 15px;
+	padding: 0 0 0 0;
+	background-color: transparent;
+	font-family: 'Kumbh Sans', sans-serif;
+	position: relative;
+	color: hsl(237, 12%, 33%);
+}
+
+button:after {
+	content: "";
+	height: 7px;
+	width: 10px;
+	background-image: url('./images/icon-arrow-down.svg');
+	position: absolute;
+	right: 0;
+}
+
+.btnClicked {
+	font-weight: 700;
+}
+
+.btnClicked:after {
+	transform: rotate(180deg);
+}
+
+.panel {
+	display: none;
+}
+
+.panel p {
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 13px;
+	margin-top: 0;
+	font-weight: 400;
+	color: hsl(240, 6%, 50%);
+}
+
+/* END FAQ SECTION */
+
+@media (max-width: 920px) {
+	main {
+		flex-direction: column;
+		display: flex;
+		max-width: 920px;
+		width: 100%;
+		min-height: 510px;
+		border-radius: 20px;
+		background-color: white;
+		margin: 145px 0 80px 0;
+	}
+
+	/* ILUSTRATION SECTION */
+
+	.ilustration_Desktop {
+		display: none;
+	}
+	.ilustration_Mobile {
+		display: block;
+	}
+
+	/* END ILUSTRATION SECTION */
+
+	h1 {
+		text-align: center;
+	}
+
+	/* END FAQ SECTION */
+
+	.faqSec {
+		padding: 0 25px 0 25px;
+		max-width: 100%;
+	}
+
+	/* ACCORDION SEC */
+
+}
+
+@media (max-width: 426px) {
+	button {
+		font-size: 13px;
+	}
+}
